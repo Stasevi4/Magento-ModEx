@@ -69,6 +69,18 @@ sudo find . \
  -type f \
   -not -path "./var/*" \
   -not -path "./.*" \
+  -not -path "./app/design/install/*" \
+  -not -path "./media/*" \
+  -not -path "./errors/*" \
+  -not -path "./downloader/*" \
+  -not -path "./includes/*" \
+  -not -path "./code/core/*" \
+  -not -path "./lib/Varien/*" \
+  -not -path "./lib/Zend/*" \
+  -not -path "./lib/Mage/*" \
+  -not -path "./lib/Mobile/*" \
+  -not -path "./lib/PEAR/*" \
+  -not -path "./lib/phpseclib/*" \
  -exec grep -l "$STRING_TO_SEARCH" {} > .tmp_file_list \;
 
 
